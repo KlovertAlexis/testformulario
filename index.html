@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Formulario de reservas</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+
+  </head>
+  <body>
+    <form action="" class="formulario">
+      <img src="img/pollito.jpg" class="polloimg" />
+
+      <h1 class="formulario__titulo">Nombre del negocio</h1>
+      <h3 class="formulario__subtitulo">Reservas</h3>
+      <p class="formulario__parrafo">
+        Llena este pequeño formulario para agendar tu cita en MI negocio
+      </p>
+
+      <label for="cliente" class="formulario__label">¿Cuál es tu nombre?</label>
+      <input
+        id="cliente"
+        type="text"
+        class="formulario__input"
+        placeholder="Indica cuál es tu nombre completo"
+      />
+
+      <label for="fecha" class="formulario__label"
+        >Indica la fecha de tu reserva</label
+      >
+      <input
+        id="fecha"
+        type="date"
+        class="formulario__input"
+        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+      />
+
+      <label for="hora" class="formulario__label"
+        >Indica la hora de tu reserva</label
+      >
+      <input id="hora" type="time" class="formulario__input" />
+
+      <label for="pollo" class="formulario__label"
+        >Elige tu porcion</label
+      >
+      <select id="pollo" name="listapollos" class="formulario__input">
+        <option>1/8 de pollo + ensalada</option>
+        <option>1/4 de pollo + ensalada</option>
+        <option>1/2 de pollo + ensalada</option>
+        <option>1 pollo entero + ensalada</option>
+      </select>
+
+      
+      <label for="bebida" class="formulario__label"
+        >Elige tu bebida</label
+      >
+      <select id="bebida" name="listadebebidas" class="formulario__input">
+        <option>Coca Cola 500ml</option>
+        <option>Coca Cola 1L</option>
+        <option>Coca Cola 2,2L</option>
+        <option>Inka Cola 500ml</option>
+        <option>Inka Cola 1L</option>
+        <option>Inka Cola 2,2L</option>
+      </select>
+
+      <div id="respuesta"></div>
+
+      <button id="submit" class="formulario__submit">Enviar a WhatsApp</button>
+    </form>
+    <script src="js/form.js"></script>
+  </body>
+</html>
